@@ -324,6 +324,11 @@ FactoryGirl.define do
     group
   end
 
+  factory :cohort do
+    start_on 0.weeks.from_now
+    end_on 2.weeks.from_now
+  end
+
   factory :visitor do
     association :community, factory: :public_community
     name "John Doe"
